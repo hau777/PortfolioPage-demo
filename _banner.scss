@@ -1,0 +1,235 @@
+.banner {
+  display: flex;
+  align-items: center;
+  // margin-top: 100px;
+  margin-bottom: 80px;
+  &-info {
+    width: 55%;
+    position: relative;
+  }
+  &-line {
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    z-index: -1;
+  }
+  &-heading {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    line-height: 83.3px;
+    margin-top: 107px;
+    color: #2b66bd;
+  }
+  // &-heading span {
+  //   display: block;
+  // }
+  &-desc {
+    margin-bottom: 28px;
+  }
+  &-img {
+    width: 45%;
+    position: relative;
+    margin-left: auto;
+    // transform: translateX(100px);
+  }
+  &-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: black;
+    padding: 9.5px 174px;
+    background-color: #f8d7cd;
+    border: 3px solid black;
+  }
+  &-link {
+    .button {
+      margin-right: 31px;
+      padding: 16px 36px;
+      width: 160px;
+      height: 56px;
+      text-align: center;
+      box-shadow: 5px 5px 0 black;
+      transition: all 0.2s linear;
+    }
+    .button:first-child {
+      background-color: $violet;
+      &:hover {
+        background-color: #e38171;
+      }
+    }
+    .button:not(:first-child) {
+      background-color: #5fb4ac;
+      &:hover {
+        background-color: #e38171;
+      }
+    }
+  }
+}
+.footer-column {
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+}
+.social {
+  display: inline-flex;
+  margin-left: 54px;
+  &-link {
+    font-size: 24px;
+    border: 1px solid black;
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    &:first-child:hover {
+      background-color: $pink;
+      color: white;
+    }
+    &:not(:first-child):hover {
+      background-color: #2b66bd;
+      color: white;
+    }
+    &:last-child:hover {
+      background-color: #77b842;
+      color: white;
+    }
+  }
+}
+.social-link + .social-link {
+  margin-left: 32px;
+}
+.bg {
+  &-ins {
+    color: $pink;
+  }
+  &-fb {
+    color: #2b66bd;
+  }
+  &-be {
+    color: #77b842;
+  }
+}
+.banner {
+  // IPAD
+  @media screen and (max-width: 1279px) {
+    &-heading {
+      font-size: 45px;
+      margin-bottom: 28px;
+      margin-top: 0;
+    }
+    &-desc {
+      margin-bottom: 30px;
+    }
+    &-link {
+      .button {
+        padding: 15px 20px;
+      }
+      .button:first-child {
+        margin-right: 10px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+    &-line {
+      position: absolute;
+      top: -130px;
+      left: -160px;
+      z-index: -1;
+      transform: scale(0.5);
+    }
+    .footer-column {
+      margin-top: 50px;
+    }
+    .social {
+      &-link {
+        &:first-child {
+          background-color: $pink;
+          color: white;
+        }
+        &:not(:first-child) {
+          background-color: #2b66bd;
+          color: white;
+        }
+        &:last-child {
+          background-color: #77b842;
+          color: white;
+        }
+      }
+    }
+  }
+  // IPHONE
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    & > * {
+      width: 100%;
+      // background-color: #5fb4ac;
+    }
+    .banner-img {
+      transform: none;
+      margin-top: 25px;
+    }
+    &-name {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      color: black;
+      padding: 9.5px 70px;
+      background-color: #f8d7cd;
+      border: 3px solid black;
+    }
+    &-link {
+      .button {
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+      .button:first-child {
+        margin-right: 10px;
+      }
+    }
+    &-line {
+      transform: scale(0);
+    }
+    .social {
+      margin-left: 30px;
+      &-link {
+        &:first-child {
+          background-color: $pink;
+          color: white;
+        }
+        &:not(:first-child) {
+          background-color: #2b66bd;
+          color: white;
+        }
+        &:last-child {
+          background-color: #77b842;
+          color: white;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    padding-top: 0px;
+    &-heading {
+      line-height: 1.4;
+      margin-bottom: 15px;
+      span {
+        display: unset;
+      }
+    }
+    &-link {
+      .button {
+        margin-right: 0px;
+        padding: 15px 20px;
+      }
+    }
+  }
+}

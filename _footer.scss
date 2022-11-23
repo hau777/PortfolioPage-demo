@@ -1,0 +1,141 @@
+.footer {
+  padding: 80px 135px;
+  background-color: $violet;
+  &-heading {
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 38px;
+    line-height: 83.3px;
+    color: #2b66bd;
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+  }
+  &-contact {
+    width: 55%;
+  }
+  &-item {
+  margin-bottom: 68px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 47.6px;
+  color: black;
+  // background-color: red;
+  border-bottom: 3px solid black;
+  padding-bottom: 8px;
+  }
+  &-link {
+    color: black;
+  }
+  &-icon {
+    float: right;
+  }
+  &-img {
+    margin-left: auto;
+    width: 40%;
+    border: 3px solid black;
+  }
+  &-col {
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    // border-top: 3px solid black;
+  }
+  &-social {
+  display: inline-flex;
+  }
+}
+.footer {
+  // IPAD
+  @media screen and (max-width: 1279px) {
+  padding: 80px 15px;
+    &-heading {
+      font-size: 45px;
+      margin-bottom: 28px;
+    }
+    &-contact {
+      width: 100%;
+    }
+    &-item {
+      margin-bottom: 30px;
+      font-size: 35px;
+      color: black;
+      // background-color: red;
+      border-bottom: 3px solid black;
+      padding-bottom: 8px;
+      width: 100%;
+    }
+    img {
+      display: none;
+    }
+    .footer-col {
+      margin-top: 50px;
+    }
+    .social {
+      &-link {
+        &:first-child {
+          background-color: $pink;
+          color: white;
+        }
+        &:not(:first-child) {
+          background-color: #2b66bd;
+          color: white;
+        }
+        &:last-child {
+          background-color: #77b842;
+          color: white;
+        }
+      }
+    }
+  }
+  // IPHONE
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+    & > * {
+      width: 100%;
+      // background-color: #5fb4ac;
+    }
+    .social {
+      margin-left: 30px;
+      &-link {
+        &:first-child {
+          background-color: $pink;
+          color: white;
+        }
+        &:not(:first-child) {
+          background-color: #2b66bd;
+          color: white;
+        }
+        &:last-child {
+          background-color: #77b842;
+          color: white;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &-heading {
+      line-height: 1.4;
+      margin-bottom: 15px;
+      span {
+        display: unset;
+      }
+    }
+    &-item {
+      margin-bottom: 30px;
+      font-size: 22px;
+      color: black;
+      // background-color: red;
+      border-bottom: 3px solid black;
+      padding-bottom: 8px;
+      width: 100%;
+    }
+    &-link {
+      .button {
+        margin-right: 0px;
+        padding: 15px 20px;
+      }
+    }
+  }
+}
